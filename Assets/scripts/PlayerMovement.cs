@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     //private bool isGrounded;
-    private bool isGorund;
+     bool isGorund;
     private float horizontalAxis;
     private float salto;
 

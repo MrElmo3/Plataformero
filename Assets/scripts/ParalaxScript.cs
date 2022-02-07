@@ -5,28 +5,25 @@ using UnityEngine;
 public class ParalaxScript : MonoBehaviour
 {
 
-    public float backgroundVelocity;
-
-    private GameObject player;
+    private float velocityMultiplicator = 0.7f;
+    private GameObject camara;
     private Vector3 lastPosition;
+    private float instantVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        lastPosition = player.transform.position;
+        camara = GameObject.FindWithTag("MainCamera");
+        lastPosition = camara.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if(lastPosition.x != player.transform.position.x){
-            moveBackgound();
-        }
-    }
+    private void FixedUpdate() {
+        instantVelocity = (camara.transform.position.x - lastPosition.x)/Time.deltaTime;
 
-    private void moveBackgound(){
-        
+        Vector3 position = transform.position;
+        position.x += instantVelocity*(velocityMultiplicator-1f)*Time.deltaTime;
+        transform.position = position;
+
+        lastPosition = camara.transform.position;
     }
 }
