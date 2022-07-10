@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 98c045952133202429de32160c4bcf96
+guid: e87851ff88f8a9c4f8498e8a02b9a153
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3297694180950552679
-    second: enemy_weapon_bullet_0
+      213: 1182300002346334789
+    second: ezgif-3-d36f542e8f_0
   - first:
-      213: -6469701535607821342
-    second: enemy_weapon_bullet_1
+      213: 7568710959964749820
+    second: ezgif-3-d36f542e8f_2
   - first:
-      213: -7352562714689508889
-    second: enemy_weapon_bullet_2
+      213: -204989104668937241
+    second: ezgif-3-d36f542e8f_4
   - first:
-      213: -8597863657890347868
-    second: enemy_weapon_bullet_3
+      213: -4358972343519026054
+    second: ezgif-3-d36f542e8f_6
+  - first:
+      213: 1413903045041954727
+    second: ezgif-3-d36f542e8f_8
+  - first:
+      213: 8240012650217686286
+    second: ezgif-3-d36f542e8f_10
+  - first:
+      213: -8370184080527842808
+    second: ezgif-3-d36f542e8f_12
+  - first:
+      213: -5938970282867958559
+    second: ezgif-3-d36f542e8f_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -60,7 +72,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -80,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_weapon_bullet_0
+      name: ezgif-3-d36f542e8f_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 7
-        height: 7
+        x: 13
+        y: 11
+        width: 84
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99fc1964d9c3c32d0800000000000000
-      internalID: -3297694180950552679
+      spriteID: 54afbc9869f586010800000000000000
+      internalID: 1182300002346334789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_weapon_bullet_1
+      name: ezgif-3-d36f542e8f_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2
-        width: 7
-        height: 5
+        x: 231
+        y: 13
+        width: 96
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ebeb473bb00736a0800000000000000
-      internalID: -6469701535607821342
+      spriteID: cfffd407486790960800000000000000
+      internalID: 7568710959964749820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_weapon_bullet_2
+      name: ezgif-3-d36f542e8f_4
       rect:
         serializedVersion: 2
-        x: 19
-        y: 2
-        width: 5
-        height: 5
+        x: 471
+        y: 0
+        width: 51
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e96622aa2376f990800000000000000
-      internalID: -7352562714689508889
+      spriteID: 7e3f161de7bb72df0800000000000000
+      internalID: -204989104668937241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_weapon_bullet_3
+      name: ezgif-3-d36f542e8f_6
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1
-        width: 4
-        height: 6
+        x: 660
+        y: 19
+        width: 110
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +192,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4843c7e804ea880800000000000000
-      internalID: -8597863657890347868
+      spriteID: a74ebc69fb1d183c0800000000000000
+      internalID: -4358972343519026054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ezgif-3-d36f542e8f_8
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 22
+        width: 84
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af919a04513f9310800000000000000
+      internalID: 1413903045041954727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ezgif-3-d36f542e8f_10
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 17
+        width: 97
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0543f019d76a5270800000000000000
+      internalID: 8240012650217686286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ezgif-3-d36f542e8f_12
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 0
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80222870de127db80800000000000000
+      internalID: -8370184080527842808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ezgif-3-d36f542e8f_14
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 12
+        width: 110
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecdd066ef9849da0800000000000000
+      internalID: -5938970282867958559
       vertices: []
       indices: 
       edges: []

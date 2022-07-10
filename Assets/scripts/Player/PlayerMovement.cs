@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     //private bool isGrounded;
-     bool isGorund;
+    bool isGorund;
     private float horizontalAxis;
     private float salto;
 
@@ -32,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
 
         Animator.SetBool("running", horizontalAxis != 0.0f);
 
+        if(horizontalAxis < 0){
+            transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else{
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
         
         if(Input.GetKeyDown(KeyCode.W) && isGorund){
             jump();

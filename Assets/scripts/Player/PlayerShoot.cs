@@ -6,6 +6,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject indicador;
     public GameObject bullet;
+    public DieScript script;
 
     private float lastTimeBullet;
    private void Awake() {
@@ -15,7 +16,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space) && Time.time > lastTimeBullet + 0.25f){
+        if(Input.GetKey(KeyCode.Space) && Time.time > lastTimeBullet + 0.25f && script.playerVivo){
             Shoot();
             lastTimeBullet = Time.time;
         }

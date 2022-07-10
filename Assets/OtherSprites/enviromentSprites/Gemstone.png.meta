@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 39ca8738ae30b974d8949f81e5fb625c
+guid: 6c7ea84084e48e24794647db42ce3cd6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9017444308583300109
-    second: john_dead_soul_0
+      213: -9083826631700589228
+    second: Gemstone_0
   - first:
-      213: -6063760930152125431
-    second: john_dead_soul_1
+      213: 333065593448226795
+    second: Gemstone_1
+  - first:
+      213: -4993063108474773014
+    second: Gemstone_2
+  - first:
+      213: -3914495600001917926
+    second: Gemstone_3
+  - first:
+      213: 3845511363382699877
+    second: Gemstone_4
+  - first:
+      213: 1232004761135793427
+    second: Gemstone_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,9 +64,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -74,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: john_dead_soul_0
+      name: Gemstone_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 4
         y: 0
-        width: 13
-        height: 26
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f346058d2a9bd280800000000000000
-      internalID: -9017444308583300109
+      spriteID: 455d0408ec3cfe180800000000000000
+      internalID: -9083826631700589228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_dead_soul_1
+      name: Gemstone_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 20
         y: 0
-        width: 12
-        height: 26
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +144,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90ce36baf8139dba0800000000000000
-      internalID: -6063760930152125431
+      spriteID: befd26084694f9400800000000000000
+      internalID: 333065593448226795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemstone_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1e046ae8315bab0800000000000000
+      internalID: -4993063108474773014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemstone_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c5e0fddfaeca9c0800000000000000
+      internalID: -3914495600001917926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemstone_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567672ae5300e5530800000000000000
+      internalID: 3845511363382699877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gemstone_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315c6158dc5f81110800000000000000
+      internalID: 1232004761135793427
       vertices: []
       indices: 
       edges: []

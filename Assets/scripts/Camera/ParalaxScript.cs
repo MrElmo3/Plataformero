@@ -21,7 +21,7 @@ public class ParalaxScript : MonoBehaviour
         instantVelocity = (camara.transform.position.x - lastPosition.x)/Time.deltaTime;
 
         Vector3 position = transform.position;
-        position.x += instantVelocity*(velocityMultiplicator-1f)*Time.deltaTime;
+        position.x += instantVelocity*(velocityMultiplicator)*Time.deltaTime;
         transform.position = position;
 
         lastPosition = camara.transform.position;
