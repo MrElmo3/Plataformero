@@ -9,19 +9,20 @@ public class PlayerShoot : MonoBehaviour
     public DieScript script;
 
     private float lastTimeBullet;
-   private void Awake() {
+    private void Awake() {
        indicador.GetComponent<SpriteRenderer>().enabled = false;
        lastTimeBullet = Time.time;
    }
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space) && Time.time > lastTimeBullet + 0.25f && script.playerVivo){
+        if(Input.GetKey(KeyCode.Space) && Time.time > lastTimeBullet + 0.30f && script.playerVivo){
             Shoot();
             lastTimeBullet = Time.time;
         }
     }
     private void Shoot(){
-        Instantiate(bullet, indicador.transform.position, Quaternion.identity);
+        GameObject p = Instantiate(bullet, indicador.transform.position, Quaternion.identity);
+        p.GetComponent<Bullet>().setParent(transform.gameObject);
     }
 }

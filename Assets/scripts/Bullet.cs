@@ -38,4 +38,7 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void setParent(GameObject parent){
+        this.parentShooting = parent;
+    }
 }

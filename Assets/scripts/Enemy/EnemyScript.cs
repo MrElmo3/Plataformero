@@ -5,13 +5,16 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     private GameObject gemstone;
-    private float velocity = 1.0f;
+    public Collider2D gemstoneCollider;
+    private float velocity = 0.40f;
     private Rigidbody2D Rigidbody2D;
+    private bool vivo;
 
     void Start()
     {
         gemstone = GameObject.FindGameObjectWithTag("Cristal");
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        gemstoneCollider = gemstone.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -23,9 +26,12 @@ public class EnemyScript : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(verctorNormalized.x, verctorNormalized.y) * velocity;
     }
 
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other == gemstoneCollider){
+            vivo = false;
+            Destroy(gameObject);
+        }
     }
 }

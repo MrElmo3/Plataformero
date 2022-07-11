@@ -3003,9 +3003,10 @@ GameObject:
   - component: {fileID: 1836719737}
   - component: {fileID: 1836719736}
   - component: {fileID: 1836719735}
+  - component: {fileID: 1836719738}
   m_Layer: 0
   m_Name: Gemstone
-  m_TagString: Untagged
+  m_TagString: Cristal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3094,6 +3095,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1836719738
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836719734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000029802322, y: 0.0001976192}
+  m_Size: {x: 0.1488927, y: 0.23594302}
+  m_Direction: 0
 --- !u!1 &1879179039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4543672257923872405, guid: 7dfe946088d22644d9e9317b04699936, type: 3}
@@ -3745,11 +3762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4543672257923872430, guid: 7dfe946088d22644d9e9317b04699936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -2.067
       objectReference: {fileID: 0}
     - target: {fileID: 4543672257923872430, guid: 7dfe946088d22644d9e9317b04699936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9233
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 4543672257923872430, guid: 7dfe946088d22644d9e9317b04699936, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3792,6 +3809,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 53856679}
     m_Modifications:
+    - target: {fileID: 4960948451310849546, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960948451310849547, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960948451310849547, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4960948451310850032, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
       propertyPath: m_Name
       value: Bat
@@ -3810,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4960948451310850033, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.9678195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4960948451310850033, guid: 44078f08aeae27c4085f611a99cb2dd7, type: 3}
       propertyPath: m_LocalRotation.w

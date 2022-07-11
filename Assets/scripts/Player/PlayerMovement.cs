@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        salto = Input.GetAxisRaw("Jump");
+        salto = Input.GetAxisRaw("Vertical");
         horizontalAxis = Input.GetAxisRaw("Horizontal");
 
         Animator.SetBool("running", horizontalAxis != 0.0f);
@@ -38,21 +38,28 @@ public class PlayerMovement : MonoBehaviour
         else{
             transform.rotation = new Quaternion(0, 0, 0, 0);
         }
-        
-        if(Input.GetKeyDown(KeyCode.W) && isGorund){
+        if(salto > 0 && isGorund){
             jump();
         }
 
         Debug.DrawRay(transform.position, Vector3.down *0.1f, Color.red);
-        if(Physics2D.Raycast(transform.position, Vector3.down, 0.1f)){
+        //if(Physics2D.Raycast(transform.position, Vector3.down, 0.1f)){
+        //    isGorund = true;
+        //}
+        //else isGorund = false;
+
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Floor")){
             isGorund = true;
         }
-        else isGorund = false;
-
     }
 
     void jump(){
         Rigidbody2D.AddForce(Vector2.up*jumpForce);
+        isGorund = false;
     }
 
     private void FixedUpdate() {

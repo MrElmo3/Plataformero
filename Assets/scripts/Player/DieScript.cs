@@ -21,7 +21,7 @@ public class DieScript : MonoBehaviour
         DieCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         animator.SetBool("vivo", playerVivo);
@@ -30,12 +30,13 @@ public class DieScript : MonoBehaviour
             PlayerRigidBody.gravityScale = 0f;
             PlayerRigidBody.velocity = new Vector2(0,0);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"hit!");
-        playerVivo = false;
+        if(other == DieCollider){
+            Debug.Log($"hit!");
+            playerVivo = false;
+        }
     }
 }
