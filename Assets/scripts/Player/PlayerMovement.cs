@@ -8,14 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public float playerVelocity; 
     public float jumpForce;
     
-
-    //private bool isGrounded;
-    bool isGorund;
+    private bool isGorund;
+    private bool direction; // false <- true ->
     private float horizontalAxis;
     private float salto;
 
-
-    private Rigidbody2D Rigidbody2D;
+    public Rigidbody2D Rigidbody2D;
     private Animator Animator;
     
     
@@ -32,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
         Animator.SetBool("running", horizontalAxis != 0.0f);
 
-        if(horizontalAxis < 0){
+        if(horizontalAxis < 0 || !direction){
             transform.rotation = new Quaternion(0, 180, 0, 0);
         }
         else{
@@ -57,12 +55,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void jump(){
+    private void jump(){
         Rigidbody2D.AddForce(Vector2.up*jumpForce);
         isGorund = false;
     }
 
     private void FixedUpdate() {
         Rigidbody2D.velocity = new Vector2(horizontalAxis*playerVelocity, Rigidbody2D.velocity.y);
+        if(Rigidbody2D.velocity.x > 0){
+            direction = true;
+        }
+        else if(Rigidbody2D.velocity.x < 0){
+            direction = false;
+        }
+    }
+
+    public bool getDirection(){
+        return this.direction;
     }
 }

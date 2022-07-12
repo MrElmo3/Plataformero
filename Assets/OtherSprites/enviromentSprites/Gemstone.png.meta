@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Gemstone_3: -3914495600001917926
+      Gemstone_4: 3845511363382699877
+      Gemstone_0: -9083826631700589228
+      Gemstone_2: -4993063108474773014
+      Gemstone_5: 1232004761135793427
+      Gemstone_1: 333065593448226795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

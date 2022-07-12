@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cristal
+  - Floor
+  - Portal
   layers:
   - Default
   - TransparentFX

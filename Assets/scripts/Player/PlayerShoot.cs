@@ -23,6 +23,6 @@ public class PlayerShoot : MonoBehaviour
     }
     private void Shoot(){
         GameObject p = Instantiate(bullet, indicador.transform.position, Quaternion.identity);
-        p.GetComponent<Bullet>().setParent(transform.gameObject);
+        p.GetComponent<PlayerBullet>().parentShooting = transform.gameObject;
     }
 }

@@ -23,6 +23,13 @@ public class EnemyScript : MonoBehaviour
         var vector = gemstone.transform.position - transform.position;
         var distance = vector.magnitude;
         var verctorNormalized = vector/distance;
+        Debug.Log(verctorNormalized.x);
+        if(verctorNormalized.x > 0){
+            transform .rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else{
+             transform .rotation = new Quaternion(0, 0, 0, 0);
+        }
         Rigidbody2D.velocity = new Vector2(verctorNormalized.x, verctorNormalized.y) * velocity;
     }
 

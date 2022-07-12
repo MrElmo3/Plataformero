@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    protected GameObject parentShooting;
+    public GameObject parentShooting;
     protected float velocity;
     private Rigidbody2D PRigidBody2d;
     private Rigidbody2D Rigidbody2D;
@@ -16,20 +16,28 @@ public class Bullet : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         PRigidBody2d = parentShooting.GetComponent<Rigidbody2D>();
         Pvelocity = PRigidBody2d.velocity.x;
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Pvelocity<0){
-            Rigidbody2D.velocity = Vector2.left*velocity;
+        if(!parentShooting.Equals(GameObject.FindGameObjectWithTag("Player"))){
+            if(Pvelocity<0){
+                Rigidbody2D.velocity = Vector2.left*velocity;
+            }
+            else{
+                Rigidbody2D.velocity = Vector2.right*velocity;
+            }
         }
         else{
-            Rigidbody2D.velocity = Vector2.right*velocity;
+            bool direction  = this.parentShooting.GetComponent<PlayerMovement>().getDirection();
+            Rigidbody2D prb = this.parentShooting.GetComponent<Rigidbody2D>();
+            if(!direction){
+                Rigidbody2D.velocity = Vector2.left*velocity;
+            }
+            else{
+                Rigidbody2D.velocity = Vector2.right*velocity;
+            }
         }
+        
     }
-
+    
     public void DestroyBullet(){
         Destroy(gameObject);
     }
