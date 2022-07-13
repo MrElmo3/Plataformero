@@ -23,7 +23,6 @@ public class EnemyScript : MonoBehaviour
         var vector = gemstone.transform.position - transform.position;
         var distance = vector.magnitude;
         var verctorNormalized = vector/distance;
-        Debug.Log(verctorNormalized.x);
         if(verctorNormalized.x > 0){
             transform .rotation = new Quaternion(0, 180, 0, 0);
         }

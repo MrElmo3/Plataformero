@@ -44,7 +44,12 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(gameObject);
+        if(!other.gameObject.Equals(parentShooting)){
+            Destroy(gameObject);    
+        }
+        if(other.gameObject.tag == "Player" && parentShooting.tag =="Enemy"){
+            other.gameObject.GetComponent<DieScript>().life-=20;
+        }
     }
     public void setParent(GameObject parent){
         this.parentShooting = parent;

@@ -6,6 +6,7 @@ public class DieScript : MonoBehaviour
 {
 
     public bool playerVivo;
+    public float life;
 
     public GameObject limite;
 
@@ -19,24 +20,38 @@ public class DieScript : MonoBehaviour
         PlayerRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         DieCollider = GetComponent<BoxCollider2D>();
+        life = 100;
     }
 
 
     void Update()
     {
         animator.SetBool("vivo", playerVivo);
-        
         if(!playerVivo){
             PlayerRigidBody.gravityScale = 0f;
             PlayerRigidBody.velocity = new Vector2(0,0);
+        }
+        if(life <=0){
+            playerVivo = false;
+        }
+
+        if(!playerVivo){
+            ScoreScript score = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreScript>();
+            score.usingScore = false;
+            //StartCoroutine(score.SubirScore());
+            animator.SetBool("vivo", playerVivo);
+            Time.timeScale = 0;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other == DieCollider){
-            Debug.Log($"hit!");
             playerVivo = false;
         }
+    }
+
+    public void destroyEnemy(){
+        this.life += 10;
     }
 }

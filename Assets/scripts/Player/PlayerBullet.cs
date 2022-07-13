@@ -10,4 +10,13 @@ public class PlayerBullet : Bullet
         this.velocity = 3.5f;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Enemy"){
+            Destroy(other.gameObject);
+            parentShooting.GetComponent<DieScript>().destroyEnemy();
+        }
+        Destroy(gameObject);
+    }
+
 }

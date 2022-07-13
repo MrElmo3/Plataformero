@@ -35,7 +35,6 @@ public class EnemyShoot : MonoBehaviour
     }
 
     private void Shoot(){
-        Debug.Log($"shoot!");
         GameObject p =Instantiate(bullet, indicador.transform.position, Quaternion.identity);
         p.GetComponent<Bullet>().setParent(transform.gameObject);
     }
