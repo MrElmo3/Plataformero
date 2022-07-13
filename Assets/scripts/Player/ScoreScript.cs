@@ -29,7 +29,7 @@ public class ScoreScript : MonoBehaviour
         }
     }
 
-    [ContextMenu("prueba get")]
+    //[ContextMenu("prueba get")]
     public async void SubirScore(){
 
         var url = "localhost:8080/getTScore";
@@ -38,7 +38,6 @@ public class ScoreScript : MonoBehaviour
         form.AddField("Score", this.score.ToString());
  
         using var wwwPOST = UnityWebRequest.Post(url, form);
-        Debug.Log($"a");
         var operation = wwwPOST.SendWebRequest();
         
         while(!operation.isDone){
@@ -48,7 +47,7 @@ public class ScoreScript : MonoBehaviour
             Debug.Log($"{wwwPOST.error}");
         }
         else
-            Debug.Log($":D");
+            wwwPOST.Dispose();
     }
 
 

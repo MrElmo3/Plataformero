@@ -13,6 +13,7 @@ public class DieScript : MonoBehaviour
     private Rigidbody2D PlayerRigidBody;
     private Collider2D DieCollider;
     private Animator animator;
+    private bool sended;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class DieScript : MonoBehaviour
         animator = GetComponent<Animator>();
         DieCollider = GetComponent<BoxCollider2D>();
         life = 100;
+        sended = false;
     }
 
 
@@ -35,12 +37,14 @@ public class DieScript : MonoBehaviour
             playerVivo = false;
         }
 
-        if(!playerVivo){
+        if(!playerVivo && !sended){
             ScoreScript score = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreScript>();
             score.usingScore = false;
-            //StartCoroutine(score.SubirScore());
+            score.SubirScore();
+            sended = true;
+
             animator.SetBool("vivo", playerVivo);
-            Time.timeScale = 0;
+            PlayerRigidBody.GetComponentInParent<Collider2D>().isTrigger = true;
         }
     }
 
